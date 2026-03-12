@@ -1,0 +1,167 @@
+[
+  {
+    "id": "contact_001",
+    "name": "Mike Johnson",
+    "title": "Operations Manager",
+    "company": "Midwest Grain Co",
+    "industry": "agriculture",
+    "email": "mjohnson@midwestgrain.com",
+    "phone": "(555) 234-5678",
+    "lead_score": 85,
+    "last_contact": "2024-01-08T14:30:00"
+  },
+  {
+    "id": "contact_002",
+    "name": "Sarah Chen",
+    "title": "Plant Engineering Director",
+    "company": "Premier Mining Solutions", 
+    "industry": "mining",
+    "email": "s.chen@premiermining.com",
+    "phone": "(555) 345-6789",
+    "lead_score": 92,
+    "last_contact": "2024-01-05T09:15:00"
+  },
+  {
+    "id": "contact_003",
+    "name": "David Rodriguez",
+    "title": "Facility Manager",
+    "company": "Sunrise Foods Manufacturing",
+    "industry": "food_processing", 
+    "email": "drodriguez@sunrisefoods.com",
+    "phone": "(555) 456-7890",
+    "lead_score": 78,
+    "last_contact": "2024-01-12T16:45:00"
+  },
+  {
+    "id": "contact_004",
+    "name": "Lisa Thompson",
+    "title": "Environmental Compliance Manager",
+    "company": "Riverfront Cement",
+    "industry": "cement",
+    "email": "lthompson@riverfrontcement.com",
+    "phone": "(555) 567-8901",
+    "lead_score": 88,
+    "last_contact": "2024-01-14T11:20:00"
+  },
+  {
+    "id": "contact_005",
+    "name": "Robert Martinez",
+    "title": "Chief Technology Officer",
+    "company": "Valley Agricultural Services",
+    "industry": "agriculture",
+    "email": "rmartinez@valleyag.com", 
+    "phone": "(555) 678-9012",
+    "lead_score": 95,
+    "last_contact": "2024-01-06T13:00:00"
+  },
+  {
+    "id": "contact_006",
+    "name": "Jennifer Wu",
+    "title": "Manufacturing Director",
+    "company": "Northern Pharma Manufacturing",
+    "industry": "pharmaceutical",
+    "email": "jwu@northernpharma.com",
+    "phone": "(555) 789-0123",
+    "lead_score": 72,
+    "last_contact": "2024-01-15T10:30:00"
+  },
+  {
+    "id": "contact_007",
+    "name": "Kevin Anderson",
+    "title": "Maintenance Supervisor",
+    "company": "Industrial Minerals Corp",
+    "industry": "mining",
+    "email": "kanderson@industrialminerals.com",
+    "phone": "(555) 890-1234",
+    "lead_score": 80,
+    "last_contact": "2024-01-07T08:45:00"
+  },
+  {
+    "id": "contact_008",
+    "name": "Amanda Foster",
+    "title": "Operations Director",
+    "company": "Westside Grain Elevator",
+    "industry": "agriculture", 
+    "email": "afoster@westsidegrain.com",
+    "phone": "(555) 901-2345",
+    "lead_score": 83,
+    "last_contact": "2024-01-13T15:20:00"
+  },
+  {
+    "id": "contact_009",
+    "name": "Mark Stevens",
+    "title": "Project Manager",
+    "company": "Mountain View Mining",
+    "industry": "mining",
+    "email": "mstevens@mountainviewmining.com",
+    "phone": "(555) 012-3456",
+    "lead_score": 97,
+    "last_contact": "2024-01-04T12:15:00"
+  },
+  {
+    "id": "contact_010", 
+    "name": "Rachel Cooper",
+    "title": "Facility Planning Manager",
+    "company": "Prairie Foods Co-op",
+    "industry": "food_processing",
+    "email": "rcooper@prairiefoods.coop",
+    "phone": "(555) 123-4567",
+    "lead_score": 74,
+    "last_contact": "2024-01-16T14:00:00"
+  },
+  {
+    "id": "contact_011",
+    "name": "Brian Liu",
+    "title": "Process Engineer",
+    "company": "Summit Chemical", 
+    "industry": "chemical",
+    "email": "bliu@summitchemical.com",
+    "phone": "(555) 234-5678",
+    "lead_score": 89,
+    "last_contact": "2024-01-14T09:30:00"
+  },
+  {
+    "id": "contact_012",
+    "name": "Diana Parker",
+    "title": "Plant Manager",
+    "company": "Great Lakes Aggregates",
+    "industry": "construction",
+    "email": "dparker@greatlakesagg.com",
+    "phone": "(555) 345-6789",
+    "lead_score": 91,
+    "last_contact": "2024-01-10T16:30:00"
+  },
+  {
+    "id": "contact_013",
+    "name": "Thomas Mitchell",
+    "title": "Operations Manager",
+    "company": "Heartland Feed Mill",
+    "industry": "agriculture",
+    "email": "tmitchell@heartlandfeed.com",
+    "phone": "(555) 456-7890", 
+    "lead_score": 76,
+    "last_contact": "2024-01-11T11:45:00"
+  },
+  {
+    "id": "contact_014",
+    "name": "Nicole Davis",
+    "title": "Facility Director",
+    "company": "Metro Waste Solutions",
+    "industry": "waste_management",
+    "email": "ndavis@metrowaste.com",
+    "phone": "(555) 567-8901",
+    "lead_score": 82,
+    "last_contact": "2024-01-09T13:15:00"
+  },
+  {
+    "id": "contact_015",
+    "name": "Christopher Lee",
+    "title": "VP of Operations",
+    "company": "Rocky Mountain Minerals",
+    "industry": "mining",
+    "email": "clee@rockymountainminerals.com",
+    "phone": "(555) 678-9012",
+    "lead_score": 99,
+    "last_contact": "2024-01-03T10:20:00"
+  }
+]

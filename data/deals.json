@@ -1,0 +1,152 @@
+[
+  {
+    "id": "deal_001",
+    "company": "Midwest Grain Co",
+    "title": "Conveyor Belt System Upgrade",
+    "stage": "Vendor Selection",
+    "value": 340000,
+    "industry": "agriculture",
+    "last_activity": "2024-01-08T14:30:00",
+    "description": "Replace aging conveyor system with new 400ft belt conveyor for grain handling"
+  },
+  {
+    "id": "deal_002", 
+    "company": "Premier Mining Solutions",
+    "title": "Pneumatic Conveying System",
+    "stage": "Proposal Sent",
+    "value": 780000,
+    "industry": "mining",
+    "last_activity": "2024-01-05T09:15:00",
+    "description": "Dense phase pneumatic system for coal handling and transport"
+  },
+  {
+    "id": "deal_003",
+    "company": "Sunrise Foods Manufacturing",
+    "title": "Bulk Storage Silo Installation",
+    "stage": "Discovery",
+    "value": 520000,
+    "industry": "food_processing",
+    "last_activity": "2024-01-12T16:45:00",
+    "description": "Three 500-ton storage silos with automated discharge systems"
+  },
+  {
+    "id": "deal_004",
+    "company": "Riverfront Cement",
+    "title": "Dust Collection System",
+    "stage": "Negotiation",
+    "value": 450000,
+    "industry": "cement",
+    "last_activity": "2024-01-14T11:20:00",
+    "description": "Industrial dust collection and air filtration for cement plant"
+  },
+  {
+    "id": "deal_005",
+    "company": "Valley Agricultural Services",
+    "title": "Material Handling Automation",
+    "stage": "Proposal Sent",
+    "value": 650000,
+    "industry": "agriculture",
+    "last_activity": "2024-01-06T13:00:00",
+    "description": "Automated grain handling system with PLC controls and sensors"
+  },
+  {
+    "id": "deal_006",
+    "company": "Northern Pharma Manufacturing",
+    "title": "Clean Room Conveyor System",
+    "stage": "Sales Qualified Lead",
+    "value": 290000,
+    "industry": "pharmaceutical",
+    "last_activity": "2024-01-15T10:30:00",
+    "description": "Stainless steel conveyor system for pharmaceutical powder handling"
+  },
+  {
+    "id": "deal_007",
+    "company": "Industrial Minerals Corp",
+    "title": "Belt Conveyor Replacement",
+    "stage": "Vendor Selection",
+    "value": 420000,
+    "industry": "mining",
+    "last_activity": "2024-01-07T08:45:00",
+    "description": "Replace 800ft belt conveyor system with heavy-duty mining grade equipment"
+  },
+  {
+    "id": "deal_008",
+    "company": "Westside Grain Elevator",
+    "title": "Pneumatic System Upgrade",
+    "stage": "Discovery",
+    "value": 380000,
+    "industry": "agriculture",
+    "last_activity": "2024-01-13T15:20:00",
+    "description": "Upgrade existing pneumatic conveying for increased grain throughput"
+  },
+  {
+    "id": "deal_009",
+    "company": "Mountain View Mining",
+    "title": "Bulk Material Handling System",
+    "stage": "Proposal Sent",
+    "value": 920000,
+    "industry": "mining",
+    "last_activity": "2024-01-04T12:15:00",
+    "description": "Complete bulk material handling solution for copper ore processing"
+  },
+  {
+    "id": "deal_010",
+    "company": "Prairie Foods Co-op",
+    "title": "Storage and Conveyor Integration",
+    "stage": "Sales Qualified Lead",
+    "value": 340000,
+    "industry": "food_processing",
+    "last_activity": "2024-01-16T14:00:00",
+    "description": "Integrate new storage silos with existing conveyor infrastructure"
+  },
+  {
+    "id": "deal_011",
+    "company": "Summit Chemical",
+    "title": "Specialized Powder Handling",
+    "stage": "Negotiation",
+    "value": 680000,
+    "industry": "chemical",
+    "last_activity": "2024-01-14T09:30:00",
+    "description": "Custom powder handling system with explosion-proof components"
+  },
+  {
+    "id": "deal_012",
+    "company": "Great Lakes Aggregates",
+    "title": "Conveyor System Expansion",
+    "stage": "Closed Won",
+    "value": 560000,
+    "industry": "construction",
+    "last_activity": "2024-01-10T16:30:00",
+    "description": "Expand existing conveyor system for increased aggregate processing"
+  },
+  {
+    "id": "deal_013",
+    "company": "Heartland Feed Mill",
+    "title": "Automated Feed System",
+    "stage": "Discovery",
+    "value": 445000,
+    "industry": "agriculture",
+    "last_activity": "2024-01-11T11:45:00",
+    "description": "Automated feed mixing and distribution system with bulk handling"
+  },
+  {
+    "id": "deal_014",
+    "company": "Metro Waste Solutions",
+    "title": "Material Recovery Conveyor",
+    "stage": "Vendor Selection",
+    "value": 320000,
+    "industry": "waste_management",
+    "last_activity": "2024-01-09T13:15:00",
+    "description": "Conveyor system for material recovery facility sorting operations"
+  },
+  {
+    "id": "deal_015",
+    "company": "Rocky Mountain Minerals",
+    "title": "High-Capacity Belt System",
+    "stage": "Proposal Sent",
+    "value": 1200000,
+    "industry": "mining",
+    "last_activity": "2024-01-03T10:20:00",
+    "description": "High-capacity belt conveyor system for large-scale mining operation"
+  }
+]

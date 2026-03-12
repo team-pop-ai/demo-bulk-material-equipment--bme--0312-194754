@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BME CRM Automation Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap');
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #faf9f5;
+            color: #4a4845;
+            min-height: 100vh;
+        }
+
+        h1, h2, h3, h4, h5, button, label, .label, nav, .badge, th {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        .app-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e8e6dc;
+            padding: 0 24px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: #1B365D;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .logo-text {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            color: #141413;
+            font-size: 18px;
+        }
+
+        .header-subtitle {
+            color: #6C757D;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e8e6dc;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .section-label {
+            font-family: 'Roboto', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            color: #b0aea5;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 14px;
+        }
+
+        .metrics-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .metric-card {
+            background: #ffffff;
+            border: 1px solid #e8e6dc;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 32px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            color: #141413;
+            margin-bottom: 4px;
+        }
+
+        .metric-label {
+            font-size: 13px;
+            color: #b0aea5;
+        }
+
+        .table-wrapper {
+            background: #ffffff;
+            border: 1px solid #e8e6dc;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            font-family: 'Roboto', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            color: #b0aea5;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #e8e6dc;
+            background: #faf9f5;
+        }
+
+        td {
+            padding: 16px;
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            border-bottom: 1px solid #f0efe9;
+            color: #4a4845;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .badge-green { color: #788c5d; background: #e8eddf; }
+        .badge-orange { color: #d97757; background: #f5e6df; }
+        .badge-blue { color: #6a9bcc; background: #e3eef7; }
+        .badge-yellow { color: #c4973a; background: #fdf3dd; }
+        .badge-red { color: #c0463a; background: #fce8e7; }
+        .badge-gray { color: #b0aea5; background: #f0efe9; }
+
+        .btn-primary {
+            background: #d97757;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+
+        .btn-primary:hover {
+            background: #b85e3a;
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
+
+        .btn-secondary {
+            background: #f0efe9;
+            color: #141413;
+            border: 1px solid #e8e6dc;
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            background: #e8e6dc;
+        }
+
+        .overdue-indicator {
+            color: #c0463a;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .loading-state {
+            text-align: center;
+            color: #d97757;
+            padding: 48px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #b0aea5;
+            padding: 48px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: #ffffff;
+            margin: 5% auto;
+            padding: 32px;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 12px;
+            border: 1px solid #e8e6dc;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e8e6dc;
+        }
+
+        .close {
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #b0aea5;
+        }
+
+        .close:hover {
+            color: #4a4845;
+        }
+
+        .email-preview {
+            background: #f0efe9;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 16px 0;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .metrics-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="app-header">
+        <div class="logo">
+            <div class="logo-icon">BME</div>
+            <div>
+                <div class="logo-text">CRM Automation Assistant</div>
+                <div class="header-subtitle">Bulk Material Equipment</div>
+            </div>
+        </div>
+        <div style="color: #6C757D; font-size: 14px;">
+            Live Demo • Tuesday 3:30 PM EST
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="metrics-row" id="metrics">
+            <div class="metric-card">
+                <div class="metric-value">24</div>
+                <div class="metric-label">Active Deals</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" style="color: #c0463a;">8</div>
+                <div class="metric-label">Overdue Follow-ups</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">$4.2M</div>
+                <div class="metric-label">Pipeline Value</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">2.1x</div>
+                <div class="metric-label">Follow-up Rate</div>
+            </div>
+        </div>
+
+        <div class="two-col">
+            <div>
+                <div class="section-label">HubSpot Pipeline — Active Deals</div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Company</th>
+                                <th>Project</th>
+                                <th>Stage</th>
+                                <th>Value</th>
+                                <th>Last Activity</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="deals-table">
+                            <tr>
+                                <td colspan="6">
+                                    <div class="loading-state">
+                                        <div style="font-size:32px; margin-bottom:12px;">⏳</div>
+                                        Loading deals...
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-label">Recent AI Activity</div>
+                <div class="card">
+                    <div id="activities-list">
+                        <div class="loading-state">
+                            Loading activities...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Follow-up Email Modal -->
+    <div id="followup-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 style="color: #141413; font-size: 20px;">AI Follow-up Email</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div id="modal-body">
+                <div class="loading-state">
+                    <div style="font-size:32px; margin-bottom:12px;">🤖</div>
+                    AI is drafting your follow-up email...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let dealsData = [];
+        let activitiesData = [];
+
+        // Load initial data
+        async function loadDashboard() {
+            try {
+                const [dealsResponse, activitiesResponse] = await Promise.all([
+                    fetch('/api/deals'),
+                    fetch('/api/activities')
+                ]);
+
+                const deals = await dealsResponse.json();
+                const activities = await activitiesResponse.json();
+
+                dealsData = deals.deals;
+                activitiesData = activities.activities;
+
+                renderDeals();
+                renderActivities();
+                updateMetrics();
+            } catch (error) {
+                console.error('Error loading dashboard:', error);
+            }
+        }
+
+        function renderDeals() {
+            const tableBody = document.getElementById('deals-table');
+            
+            if (dealsData.length === 0) {
+                tableBody.innerHTML = `
+                    <tr>
+                        <td colspan="6">
+                            <div class="empty-state">No deals found</div>
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            tableBody.innerHTML = dealsData.map(deal => {
+                const stageColor = getStageBadgeColor(deal.stage);
+                const lastActivity = new Date(deal.last_activity).toLocaleDateString();
+                const overdueHtml = deal.is_overdue ? 
+                    `<div class="overdue-indicator">${deal.days_overdue} days overdue</div>` : 
+                    lastActivity;
+
+                return `
+                    <tr>
+                        <td><strong>${deal.company}</strong></td>
+                        <td>${deal.title}</td>
+                        <td><span class="badge ${stageColor}">${deal.stage}</span></td>
+                        <td style="font-family: monospace;">$${deal.value.toLocaleString()}</td>
+                        <td>${overdueHtml}</td>
+                        <td>
+                            ${deal.is_overdue ? 
+                                `<button class="btn-primary" onclick="draftFollowup('${deal.id}')">Draft Follow-up</button>` :
+                                `<button class="btn-secondary">Up to date</button>`
+                            }
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function renderActivities() {
+            const activitiesList = document.getElementById('activities-list');
+            
+            if (activitiesData.length === 0) {
+                activitiesList.innerHTML = '<div class="empty-state">No recent activities</div>';
+                return;
+            }
+
+            activitiesList.innerHTML = activitiesData
+                .slice(-5) // Last 5 activities
+                .reverse()
+                .map(activity => {
+                    const time = new Date(activity.timestamp).toLocaleTimeString('en-US', {
+                        hour: 'numeric',
+                        minute: '2-digit'
+                    });
+                    
+                    const icon = activity.type === 'followup_sent' ? '📧' : '✨';
+                    const action = activity.type === 'followup_sent' ? 'Sent follow-up' : 'Drafted email';
+                    
+                    return `
+                        <div style="display: flex; gap: 12px; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #f0efe9;">
+                            <div style="font-size: 16px;">${icon}</div>
+                            <div style="flex: 1;">
+                                <div style="font-size: 13px; color: #141413; font-weight: 600;">${action}</div>
+                                <div style="font-size: 12px; color: #b0aea5; margin-top: 2px;">${time}</div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+        }
+
+        function updateMetrics() {
+            const activeDeals = dealsData.filter(d => d.stage !== 'Closed Won' && d.stage !== 'Closed Lost').length;
+            const overdueDeals = dealsData.filter(d => d.is_overdue).length;
+            const pipelineValue = dealsData
+                .filter(d => d.stage !== 'Closed Won' && d.stage !== 'Closed Lost')
+                .reduce((sum, d) => sum + d.value, 0);
+
+            document.getElementById('metrics').innerHTML = `
+                <div class="metric-card">
+                    <div class="metric-value">${activeDeals}</div>
+                    <div class="metric-label">Active Deals</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" style="color: #c0463a;">${overdueDeals}</div>
+                    <div class="metric-label">Overdue Follow-ups</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">$${(pipelineValue / 1000000).toFixed(1)}M</div>
+                    <div class="metric-label">Pipeline Value</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">2.1x</div>
+                    <div class="metric-label">Follow-up Rate</div>
+                </div>
+            `;
+        }
+
+        function getStageBadgeColor(stage) {
+            const stageColors = {
+                'Lead': 'badge-gray',
+                'Marketing Qualified Lead': 'badge-blue',
+                'Sales Qualified Lead': 'badge-blue',
+                'Discovery': 'badge-yellow',
+                'Proposal Sent': 'badge-orange',
+                'Negotiation': 'badge-orange',
+                'Vendor Selection': 'badge-orange',
+                'Closed Won': 'badge-green',
+                'Closed Lost': 'badge-red'
+            };
+            return stageColors[stage] || 'badge-gray';
+        }
+
+        // Draft follow-up email
+        async function draftFollowup(dealId) {
+            const modal = document.getElementById('followup-modal');
+            const modalBody = document.getElementById('modal-body');
+            
+            modal.style.display = 'block';
+            modalBody.innerHTML = `
+                <div class="loading-state">
+                    <div style="font-size:32px; margin-bottom:12px;">🤖</div>
+                    AI is analyzing the deal and drafting your follow-up email...
+                </div>
+            `;
+
+            try {
+                const response = await fetch('/api/draft_followup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ deal_id: dealId })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    modalBody.innerHTML = `
+                        <div style="margin-bottom: 16px;">
+                            <strong>To:</strong> ${result.contact_name} at ${result.deal.company}<br>
+                            <strong>Deal:</strong> ${result.deal.title} ($${result.deal.value.toLocaleString()})
+                        </div>
+                        
+                        <div class="email-preview">${result.email_content}</div>
+                        
+                        <div class="action-buttons">
+                            <button class="btn-primary" onclick="sendFollowup('${dealId}', \`${result.email_content.replace(/`/g, '\\`')}\`)">
+                                Send Follow-up Email
+                            </button>
+                            <button class="btn-secondary" onclick="closeModal()">
+                                Save as Draft
+                            </button>
+                        </div>
+                        
+                        ${result.note ? `<div style="margin-top: 12px; font-size: 12px; color: #b0aea5;">${result.note}</div>` : ''}
+                    `;
+                } else {
+                    modalBody.innerHTML = `
+                        <div style="color: #c0463a; text-align: center; padding: 20px;">
+                            Error drafting email. Please try again.
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error drafting follow-up:', error);
+                modalBody.innerHTML = `
+                    <div style="color: #c0463a; text-align: center; padding: 20px;">
+                        Network error. Please check your connection and try again.
+                    </div>
+                `;
+            }
+        }
+
+        // Send follow-up email
+        async function sendFollowup(dealId, emailContent) {
+            try {
+                const response = await fetch('/api/send_followup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ deal_id: dealId, email_content: emailContent })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    closeModal();
+                    
+                    // Show success message
+                    const successMessage = document.createElement('div');
+                    successMessage.style.cssText = `
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                        background: #e8eddf;
+                        border: 1px solid #b8ccaa;
+                        color: #4a6a3a;
+                        padding: 16px 20px;
+                        border-radius: 8px;
+                        z-index: 1001;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 14px;
+                    `;
+                    successMessage.textContent = '✅ Follow-up email sent successfully!';
+                    document.body.appendChild(successMessage);
+
+                    setTimeout(() => {
+                        successMessage.remove();
+                    }, 3000);
+
+                    // Reload dashboard to reflect changes
+                    loadDashboard();
+                } else {
+                    alert('Error sending email. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error sending follow-up:', error);
+                alert('Network error. Please check your connection and try again.');
+            }
+        }
+
+        // Modal controls
+        function closeModal() {
+            document.getElementById('followup-modal').style.display = 'none';
+        }
+
+        // Close modal when clicking X or outside
+        document.querySelector('.close').onclick = closeModal;
+        window.onclick = function(event) {
+            const modal = document.getElementById('followup-modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+
+        // Initialize dashboard
+        loadDashboard();
+        
+        // Refresh data every 30 seconds
+        setInterval(loadDashboard, 30000);
+    </script>
+</body>
+</html>
